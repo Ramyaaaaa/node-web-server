@@ -43,7 +43,11 @@ app.get('/about',(req,res)=>{
     }); //templates are stored in views folder by default in express
 });
 
-
+app.get('/project',(req,res)=>{
+    res.render('project.hbs',{
+        pageTitle:"Your projects",
+    });
+});
 app.use((req,res,next)=>{
     res.render('maintainence.hbs');
 });
